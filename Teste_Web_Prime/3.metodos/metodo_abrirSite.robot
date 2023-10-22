@@ -57,10 +57,10 @@ Selecionar a opção do tipo sanguíneo
 #Inserir anexo
 Inserir anexo
     Scroll Element Into View    ${btn_anexo}
-    Click Element    ${btn_anexo}
-    Click Element    ${btn_procurar_anexo}
+    Click Element               ${btn_anexo}
+    Click Element               ${btn_procurar_anexo}
     builtin.Sleep    2s
-    pyautogui.Write    ${EXECDIR}\\7.anexos\\Anderson Vieira_CV.pdf
+    pyautogui.Write             ${EXECDIR}\\7.anexos\\Anderson Vieira_CV.pdf
     builtin.Sleep    2s
     Press    Enter
     

@@ -19,3 +19,4 @@ Finalizar Conexão
     Log To Console    ....Finalizando aplicação
     Capture Page Screenshot       closed.png         
     Close Browser
+
