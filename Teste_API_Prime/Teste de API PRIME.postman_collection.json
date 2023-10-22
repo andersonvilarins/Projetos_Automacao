@@ -1,0 +1,188 @@
+{
+	"info": {
+		"_postman_id": "7610eb36-beba-43b8-9b72-c69201cac9cd",
+		"name": "Teste de API PRIME",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23738915"
+	},
+	"item": [
+		{
+			"name": "Gerar_Massa_Tipo_Pessoa",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//HTTP STATUS\r",
+							"//Validar o campo Status Code\r",
+							"pm.test(\"HTTP Status é 200\", function (){\r",
+							"    pm.response.to.have.status(200);\r",
+							"\r",
+							"});\r",
+							"//ResponseBody\r",
+							"// Declarando a variável que irá receber o json da resposta\r",
+							"\r",
+							"var jsonData = pm.response.json();\r",
+							"console.log(jsonData);\r",
+							"\r",
+							"//Validar se o campo 'idade' está presente no ResponseBody\r",
+							"pm.test(\"Campo 'idade' está presente no body\", function(){\r",
+							"    pm.expect(jsonData[0].idade).to.exist;\r",
+							"})\r",
+							"\r",
+							"//Validar valor do campo 'sexo' é igual a Masculino\r",
+							"pm.test(\"O valor do campo é: Masculino\", function () {\r",
+							"    pm.expect(jsonData[0].sexo).to.equal('Masculino');\r",
+							"    \r",
+							"});\r",
+							"//Validar valor do campo 'sexo é igual a Feminino valor inválido\r",
+							"pm.test(\"O valor do campo é inválido\", function () {\r",
+							"    pm.expect(jsonData[0].sexo).to.equal('Feminino');\r",
+							"    \r",
+							"});\r",
+							"//Armazenar o campo CPF em uma variável de mesmo nome \"CPF\"\r",
+							"\r",
+							"pm.test(\"Armazena CPF\", function () {\r",
+							"    console.log(jsonData[0].cpf);\r",
+							"    pm.environment.set(\"CPF\", jsonData[0].cpf);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "acao",
+							"value": "gerar_pessoa",
+							"contentType": "multipart/form-data",
+							"type": "text"
+						},
+						{
+							"key": "pontuacao",
+							"value": "N",
+							"contentType": "multipart/form-data",
+							"type": "text"
+						},
+						{
+							"key": "sexo",
+							"value": "H",
+							"contentType": "multipart/form-data",
+							"type": "text"
+						},
+						{
+							"key": "txt_qtde",
+							"value": "1",
+							"contentType": "multipart/form-data",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://www.4devs.com.br/ferramentas_online.php",
+					"protocol": "https",
+					"host": [
+						"www",
+						"4devs",
+						"com",
+						"br"
+					],
+					"path": [
+						"ferramentas_online.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Validar_CPF",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//HTTP STATUS\r",
+							"//Validar o campo Status Code\r",
+							"pm.test(\"HTTP Status é 200\", function (){\r",
+							"    pm.response.to.have.status(200);\r",
+							"\r",
+							"});\r",
+							"//ResponseBody\r",
+							"\r",
+							"var jsonData = pm.response.text();\r",
+							"\r",
+							"var CPF = pm.environment.get(\"CPF\")\r",
+							"var resposta_esperada = CPF + \" - Verdadeiro\"\r",
+							"\r",
+							"\r",
+							"//Validar se a resposta é verdadeira para o CPF informado.\r",
+							"pm.test(\"Validar se o CPF tem o valor 'Verdadeiro'\",function(){\r",
+							"    pm.expect(jsonData).to.equal(resposta_esperada)\r",
+							"})\r",
+							"\r",
+							"// Opção 1 limpar a variável CPF\r",
+							"pm.environment.set(\"CPF\",\"\");\r",
+							"\r",
+							"// Opção 2 Excluir a varíavel\r",
+							"//pm.environment.unset(\"CPF\");\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "acao",
+							"value": "validar_cpf",
+							"type": "text"
+						},
+						{
+							"key": "txt_cpf",
+							"value": "{{CPF}}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://www.4devs.com.br/ferramentas_online.php",
+					"protocol": "https",
+					"host": [
+						"www",
+						"4devs",
+						"com",
+						"br"
+					],
+					"path": [
+						"ferramentas_online.php"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "variable_key",
+			"value": ""
+		}
+	]
+}

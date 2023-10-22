@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.11.2 on win32)" generated="20230720 16:24:17.555" rpa="false" schemaversion="3">
+<suite id="s1" name="CT22 Criar DBD Bem Fgts Pis e Saldo Contas Aplicações Bancarias e Semovente e Outros" source="Z:\Users\marcos.yamashita\Documents\Projetos\ITCD - SEF-MG - Robot Framework\Pages\CT22_Criar_DBD_Bem_Fgts_Pis_e_Saldo_Contas_Aplicações_Bancarias_e_Semovente_e_Outros.robot">
+<test id="s1-t1" name="Acessando conta ITCD - Conta gov" line="10">
+<kw name="Obter Valores json" library="Login_Resource">
+<kw name="Set Suite Variable" library="BuiltIn">
+<arg>${NOMEMASSADEDADOS}</arg>
+<arg>massaCasoITCD01</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<msg timestamp="20230720 16:24:18.301" level="INFO">${NOMEMASSADEDADOS} = massaCasoITCD01</msg>
+<status status="PASS" starttime="20230720 16:24:18.299" endtime="20230720 16:24:18.301"/>
+</kw>
+<kw name="Ler dado JSON" library="LerDadosJson">
+<var>${URL_TST}</var>
+<arg>url_tst</arg>
+<kw name="Obter caso de teste atual" library="LerDadosJson">
+<var>${nome_caso_teste}</var>
+<msg timestamp="20230720 16:24:18.302" level="INFO">${nome_caso_teste} = Acessando conta ITCD - Conta gov</msg>
+<status status="PASS" starttime="20230720 16:24:18.302" endtime="20230720 16:24:18.302"/>
+</kw>
+<kw name="Obter nome da massa de dados" library="LerDadosJson">
+<var>${file_name}</var>
+<msg timestamp="20230720 16:24:18.303" level="INFO">${file_name} = massaCasoITCD01</msg>
+<status status="PASS" starttime="20230720 16:24:18.302" endtime="20230720 16:24:18.303"/>
+</kw>
+<kw name="Obter valor" library="LerDadosJson">
+<var>${valor}</var>
+<arg>${file_name}</arg>
+<arg>${propriedade}</arg>
+<arg>${nome_caso_teste}</arg>
+<kw name="Catenate" library="BuiltIn">
+<var>${path_file_json}</var>
+<arg>${EXECDIR}\\Massas\\${file_name}.json</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<msg timestamp="20230720 16:24:18.304" level="INFO">${path_file_json} = Z:\Users\marcos.yamashita\Documents\Projetos\ITCD - SEF-MG - Robot Framework\Pages\Massas\massaCasoITCD01.json</msg>
+<status status="PASS" starttime="20230720 16:24:18.303" endtime="20230720 16:24:18.304"/>
+</kw>
+<kw name="Load JSON from file" library="RPA.JSON">
+<var>${json}</var>
+<arg>${path_file_json}</arg>
+<doc>Load JSON data from a file, and return it as JSON serializable object.
+Depending on the input file the object can be either a dictionary,
+a list, or a scalar value.</doc>
+<msg timestamp="20230720 16:24:18.304" level="INFO">Loading JSON from file: Z:\Users\marcos.yamashita\Documents\Projetos\ITCD - SEF-MG - Robot Framework\Pages\Massas\massaCasoITCD01.json</msg>
+<msg timestamp="20230720 16:24:18.305" level="FAIL">FileNotFoundError: [Errno 2] No such file or directory: 'Z:\\Users\\marcos.yamashita\\Documents\\Projetos\\ITCD - SEF-MG - Robot Framework\\Pages\\Massas\\massaCasoITCD01.json'</msg>
+<status status="FAIL" starttime="20230720 16:24:18.304" endtime="20230720 16:24:18.306"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${json_path}</var>
+<arg>$[?(@.CasoTeste=="${nome_caso_teste}")].${propriedade}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="NOT RUN" starttime="20230720 16:24:18.307" endtime="20230720 16:24:18.307"/>
+</kw>
+<kw name="Get value from JSON" library="RPA.JSON">
+<var>${valor}</var>
+<arg>${json}</arg>
+<arg>${json_path}</arg>
+<doc>Get a single value from a JSON serializable object that matches the given expression.</doc>
+<status status="NOT RUN" starttime="20230720 16:24:18.307" endtime="20230720 16:24:18.307"/>
+</kw>
+<status status="FAIL" starttime="20230720 16:24:18.303" endtime="20230720 16:24:18.308"/>
+</kw>
+<status status="FAIL" starttime="20230720 16:24:18.301" endtime="20230720 16:24:18.309"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${URL_TST}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20230720 16:24:18.309" endtime="20230720 16:24:18.309"/>
+</kw>
+<kw name="Ler dado JSON" library="LerDadosJson">
+<var>${USUARIO_CPF}</var>
+<arg>usuario_cpf</arg>
+<status status="NOT RUN" starttime="20230720 16:24:18.309" endtime="20230720 16:24:18.309"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${USUARIO_CPF}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20230720 16:24:18.309" endtime="20230720 16:24:18.309"/>
+</kw>
+<kw name="Ler dado JSON" library="LerDadosJson">
+<var>${SENHA}</var>
+<arg>senha</arg>
+<status status="NOT RUN" starttime="20230720 16:24:18.309" endtime="20230720 16:24:18.309"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${SENHA}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20230720 16:24:18.309" endtime="20230720 16:24:18.309"/>
+</kw>
+<kw name="Ler dado JSON" library="LerDadosJson">
+<var>${CPF_FALECIDO}</var>
+<arg>cpf_falecido</arg>
+<status status="NOT RUN" starttime="20230720 16:24:18.309" endtime="20230720 16:24:18.309"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${CPF_FALECIDO}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20230720 16:24:18.309" endtime="20230720 16:24:18.309"/>
+</kw>
+<kw name="Ler dado JSON" library="LerDadosJson">
+<var>${CPF_CONJUGE}</var>
+<arg>cpf_conjuge</arg>
+<status status="NOT RUN" starttime="20230720 16:24:18.310" endtime="20230720 16:24:18.310"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${CPF_CONJUGE}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20230720 16:24:18.310" endtime="20230720 16:24:18.310"/>
+</kw>
+<kw name="Ler dado JSON" library="LerDadosJson">
+<var>${CPF_FILHO}</var>
+<arg>cpf_filho</arg>
+<status status="NOT RUN" starttime="20230720 16:24:18.310" endtime="20230720 16:24:18.310"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${CPF_FILHO}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20230720 16:24:18.310" endtime="20230720 16:24:18.310"/>
+</kw>
+<kw name="Ler dado JSON" library="LerDadosJson">
+<var>${EMAIL_RESPONSAVEL}</var>
+<arg>email_responsavel</arg>
+<status status="NOT RUN" starttime="20230720 16:24:18.310" endtime="20230720 16:24:18.310"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${EMAIL_RESPONSAVEL}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20230720 16:24:18.310" endtime="20230720 16:24:18.310"/>
+</kw>
+<kw name="Ler dado JSON" library="LerDadosJson">
+<var>${CPF_TESTAMENTARIO}</var>
+<arg>cpf_testamentario</arg>
+<status status="NOT RUN" starttime="20230720 16:24:18.310" endtime="20230720 16:24:18.310"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${CPF_TESTAMENTARIO}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20230720 16:24:18.310" endtime="20230720 16:24:18.310"/>
+</kw>
+<kw name="Ler dado JSON" library="LerDadosJson">
+<var>${CPF_FILHO_2}</var>
+<arg>cpf_filho_2</arg>
+<status status="NOT RUN" starttime="20230720 16:24:18.310" endtime="20230720 16:24:18.310"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${CPF_FILHO_2}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20230720 16:24:18.310" endtime="20230720 16:24:18.310"/>
+</kw>
+<kw name="Ler dado JSON" library="LerDadosJson">
+<var>${CPF_AVOS}</var>
+<arg>cpf_avos</arg>
+<status status="NOT RUN" starttime="20230720 16:24:18.310" endtime="20230720 16:24:18.310"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${CPF_AVOS}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20230720 16:24:18.310" endtime="20230720 16:24:18.311"/>
+</kw>
+<kw name="Ler dado JSON" library="LerDadosJson">
+<var>${CPF_PAIS}</var>
+<arg>cpf_pais</arg>
+<status status="NOT RUN" starttime="20230720 16:24:18.311" endtime="20230720 16:24:18.311"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${CPF_PAIS}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20230720 16:24:18.311" endtime="20230720 16:24:18.311"/>
+</kw>
+<kw name="Ler dado JSON" library="LerDadosJson">
+<var>${CPF_NETO}</var>
+<arg>cpf_neto</arg>
+<status status="NOT RUN" starttime="20230720 16:24:18.311" endtime="20230720 16:24:18.311"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${CPF_NETO}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20230720 16:24:18.311" endtime="20230720 16:24:18.311"/>
+</kw>
+<kw name="Ler dado JSON" library="LerDadosJson">
+<var>${CPF_FILHOUNILATERAL}</var>
+<arg>cpf_filhounilateral</arg>
+<status status="NOT RUN" starttime="20230720 16:24:18.311" endtime="20230720 16:24:18.311"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${CPF_FILHOUNILATERAL}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20230720 16:24:18.311" endtime="20230720 16:24:18.311"/>
+</kw>
+<kw name="Ler dado JSON" library="LerDadosJson">
+<var>${CPF_OUTRO}</var>
+<arg>cpf_outro</arg>
+<status status="NOT RUN" starttime="20230720 16:24:18.311" endtime="20230720 16:24:18.311"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${CPF_OUTRO}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20230720 16:24:18.311" endtime="20230720 16:24:18.311"/>
+</kw>
+<kw name="Ler dado JSON" library="LerDadosJson">
+<var>${CNPJ_EMPRESA}</var>
+<arg>cnpj_empresa</arg>
+<status status="NOT RUN" starttime="20230720 16:24:18.311" endtime="20230720 16:24:18.311"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${CNPJ_EMPRESA}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20230720 16:24:18.311" endtime="20230720 16:24:18.311"/>
+</kw>
+<status status="FAIL" starttime="20230720 16:24:18.299" endtime="20230720 16:24:18.312"/>
+</kw>
+<kw name="Dado que acesso o sistema pelo ambiente TST" library="Login_Resource">
+<status status="NOT RUN" starttime="20230720 16:24:18.312" endtime="20230720 16:24:18.312"/>
+</kw>
+<kw name="Verifico se estou na pagina de login" library="Login_Resource">
+<status status="NOT RUN" starttime="20230720 16:24:18.312" endtime="20230720 16:24:18.312"/>
+</kw>
+<kw name="Digito o cpf e senha" library="Login_Resource">
+<status status="NOT RUN" starttime="20230720 16:24:18.313" endtime="20230720 16:24:18.313"/>
+</kw>
+<kw name="E clico na logo da SEF para acessar o perfil usuario externo" library="Login_Resource">
+<status status="NOT RUN" starttime="20230720 16:24:18.313" endtime="20230720 16:24:18.313"/>
+</kw>
+<kw name="Verificar se estou na pagina principal do ITCD" library="Login_Resource">
+<status status="NOT RUN" starttime="20230720 16:24:18.313" endtime="20230720 16:24:18.313"/>
+</kw>
+<status status="FAIL" starttime="20230720 16:24:18.298" endtime="20230720 16:24:18.314">FileNotFoundError: [Errno 2] No such file or directory: 'Z:\\Users\\marcos.yamashita\\Documents\\Projetos\\ITCD - SEF-MG - Robot Framework\\Pages\\Massas\\massaCasoITCD01.json'</status>
+</test>
+<test id="s1-t2" name="Tela inicial - Criação de DBD" line="18">
+<kw name="Dado que estou na pagina inicial do ITCD" library="Login_Resource">
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>${BOTAO_CRIAR_NOVA_DBD}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20230720 16:24:18.317" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20230720 16:24:18.317" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20230720 16:24:18.316" endtime="20230720 16:24:18.777"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="RPA.Browser.Selenium">
+<arg>${BOTAO_CRIAR_NOVA_DBD}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="NOT RUN" starttime="20230720 16:24:18.777" endtime="20230720 16:24:18.777"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230720 16:24:18.777" endtime="20230720 16:24:18.777"/>
+</kw>
+<kw name="Click Element" library="RPA.Browser.Selenium">
+<arg>${BOTAO_ATIVAR_MODO_DARK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230720 16:24:18.778" endtime="20230720 16:24:18.778"/>
+</kw>
+<status status="FAIL" starttime="20230720 16:24:18.316" endtime="20230720 16:24:18.778"/>
+</kw>
+<kw name="Então clico em &quot;CRIAR NOVA DBD&quot;" library="Login_Resource">
+<status status="NOT RUN" starttime="20230720 16:24:18.779" endtime="20230720 16:24:18.779"/>
+</kw>
+<kw name="E verifico se estou na pagina para escolha do tipo de transmissão" library="Login_Resource">
+<status status="NOT RUN" starttime="20230720 16:24:18.779" endtime="20230720 16:24:18.779"/>
+</kw>
+<kw name="E na tela seguinte clico em &quot;CAUSA MORTIS&quot;" library="Login_Resource">
+<status status="NOT RUN" starttime="20230720 16:24:18.780" endtime="20230720 16:24:18.780"/>
+</kw>
+<status status="FAIL" starttime="20230720 16:24:18.316" endtime="20230720 16:24:18.780">No browser is open.</status>
+</test>
+<test id="s1-t3" name="Tela 03 - Dados Basicos" line="24">
+<kw name="Dado que estou na tela de Dados Basicos" library="Login_Resource">
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>${CHECK_TELA_DADOS_BASICOS}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20230720 16:24:18.788" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20230720 16:24:18.788" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20230720 16:24:18.788" endtime="20230720 16:24:18.789"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230720 16:24:18.790" endtime="20230720 16:24:18.790"/>
+</kw>
+<status status="FAIL" starttime="20230720 16:24:18.788" endtime="20230720 16:24:18.790"/>
+</kw>
+<kw name="ENTÂO digito o CPF do falecido" library="Login_Resource">
+<status status="NOT RUN" starttime="20230720 16:24:18.791" endtime="20230720 16:24:18.791"/>
+</kw>
+<kw name="E Verifico se o sistema vai trazer o nome dele" library="Login_Resource">
+<status status="NOT RUN" starttime="20230720 16:24:18.791" endtime="20230720 16:24:18.791"/>
+</kw>
+<kw name="E verifico se habilitou o campo da data do obito" library="Login_Resource">
+<status status="NOT RUN" starttime="20230720 16:24:18.792" endtime="20230720 16:24:18.792"/>
+</kw>
+<kw name="E digito a data do obito" library="Login_Resource">
+<status status="NOT RUN" starttime="20230720 16:24:18.792" endtime="20230720 16:24:18.792"/>
+</kw>
+<kw name="E verifico se apresentou a opção de escolha de testamento" library="Login_Resource">
+<status status="NOT RUN" starttime="20230720 16:24:18.793" endtime="20230720 16:24:18.793"/>
+</kw>
+<kw name="E verifico se apresentou a opção de uniao estavel" library="Login_Resource">
+<status status="NOT RUN" starttime="20230720 16:24:18.793" endtime="20230720 16:24:18.793"/>
+</kw>
+<kw name="E verifico se apresentou o campo de selecao e campo de anexo da uniao estavel" library="Login_Resource">
+<status status="NOT RUN" starttime="20230720 16:24:18.793" endtime="20230720 16:24:18.793"/>
+</kw>
+<kw name="E seleciono o tipo de regime de bens" library="Login_Resource">
+<status status="NOT RUN" starttime="20230720 16:24:18.794" endtime="20230720 16:24:18.794"/>
+</kw>
+<kw name="E seleciono o tipo de uniao estavel nao formalizada" library="Login_Resource">
+<status status="NOT RUN" starttime="20230720 16:24:18.794" endtime="20230720 16:24:18.794"/>
+</kw>
+<kw name="E seleciono o tipo de Inventario" library="Login_Resource">
+<status status="NOT RUN" starttime="20230720 16:24:18.795" endtime="20230720 16:24:18.795"/>
+</kw>
+<kw name="E seleciono o local da comarca ou forum do inventario" library="Login_Resource">
+<status status="NOT RUN" starttime="20230720 16:24:18.796" endtime="20230720 16:24:18.796"/>
+</kw>
+<kw name="E seleciono o estado aonde esta sendo realizado o inventario" library="Login_Resource">
+<status status="NOT RUN" starttime="20230720 16:24:18.796" endtime="20230720 16:24:18.796"/>
+</kw>
+<kw name="E seleciono a cidade aonde esta sendo realizado o inventario" library="Login_Resource">
+<status status="NOT RUN" starttime="20230720 16:24:18.796" endtime="20230720 16:24:18.796"/>
+</kw>
+<kw name="E clico em avançar na tela de Dados Basicos" library="Login_Resource">
+<status status="NOT RUN" starttime="20230720 16:24:18.796" endtime="20230720 16:24:18.796"/>
+</kw>
+<status status="FAIL" starttime="20230720 16:24:18.786" endtime="20230720 16:24:18.797">No browser is open.</status>
+</test>
+<test id="s1-t4" name="Tela 04 - Dados do Responsavel" line="41">
+<kw name="Dado que estou na tela de Dados do Responsavel" library="Login_Resource">
+<kw name="Sleep" library="BuiltIn">
+<arg>4s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230720 16:24:22.800" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" starttime="20230720 16:24:18.800" endtime="20230720 16:24:22.800"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>(//div[contains(.,'Dados do responsável')])[13]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20230720 16:24:22.801" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20230720 16:24:22.801" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20230720 16:24:22.800" endtime="20230720 16:24:22.802"/>
+</kw>
+<status status="FAIL" starttime="20230720 16:24:18.800" endtime="20230720 16:24:22.803"/>
+</kw>
+<kw name="ENTAO verifico se a situacao da DBD e: &quot;AGUARDANDO O PREENCHIMENTO DA DBD&quot;" library="Login_Resource">
+<status status="NOT RUN" starttime="20230720 16:24:22.804" endtime="20230720 16:24:22.804"/>
+</kw>
+<kw name="ENTÃO verifico se os dados do responsavel vieram preenchidos" library="Login_Resource">
+<status status="NOT RUN" starttime="20230720 16:24:22.805" endtime="20230720 16:24:22.805"/>
+</kw>
+<kw name="E digito o email do responsavel" library="Login_Resource">
+<status status="NOT RUN" starttime="20230720 16:24:22.805" endtime="20230720 16:24:22.805"/>
+</kw>
+<kw name="E o sistema pergunta se o responsavel pela declaracao e o inventariante" library="Login_Resource">
+<status status="NOT RUN" starttime="20230720 16:24:22.806" endtime="20230720 16:24:22.806"/>
+</kw>
+<kw name="E o sistema habilita o botão avançar" library="Login_Resource">
+<status status="NOT RUN" starttime="20230720 16:24:22.807" endtime="20230720 16:24:22.807"/>
+</kw>
+<kw name="Pegando o numero do protocolo DBD para cancelamento posterior" library="Login_Resource">
+<status status="NOT RUN" starttime="20230720 16:24:22.807" endtime="20230720 16:24:22.807"/>
+</kw>
+<status status="FAIL" starttime="20230720 16:24:18.799" endtime="20230720 16:24:22.808">No browser is open.</status>
+</test>
+<test id="s1-t5" name="Tela 05 - Beneficiario e Meeiro" line="50">
+<kw name="Dado que estou na tela de beneficiario e Meeiro" library="Login_Resource">
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="FAIL" starttime="20230720 16:24:22.811" endtime="20230720 16:24:24.998"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>//div[@class='header-title'][contains(.,'Beneficiário | Meeiro')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230720 16:24:24.999" endtime="20230720 16:24:24.999"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230720 16:24:24.999" endtime="20230720 16:24:24.999"/>
+</kw>
+<status status="FAIL" starttime="20230720 16:24:22.811" endtime="20230720 16:24:24.999"/>
+</kw>
+<kw name="E clico no botao adicionar para incluir um beneficiario conjuge" library="Login_Resource">
+<status status="NOT RUN" starttime="20230720 16:24:25.000" endtime="20230720 16:24:25.000"/>
+</kw>
+<kw name="E preecho o cpf do beneficiario conjuge" library="Login_Resource">
+<status status="NOT RUN" starttime="20230720 16:24:25.001" endtime="20230720 16:24:25.001"/>
+</kw>
+<kw name="E clico no botao adicionar para incluir um beneficiario filho" library="Login_Resource">
+<status status="NOT RUN" starttime="20230720 16:24:25.001" endtime="20230720 16:24:25.002"/>
+</kw>
+<kw name="E preencho o cpf do beneficiario filho" library="Login_Resource">
+<status status="NOT RUN" starttime="20230720 16:24:25.002" endtime="20230720 16:24:25.002"/>
+</kw>
+<kw name="ENTAO selecionamos se o beneficiario renuncia sua parte NAO" library="Login_Resource">
+<status status="NOT RUN" starttime="20230720 16:24:25.002" endtime="20230720 16:24:25.002"/>
+</kw>
+<kw name="E o sistema habilita o botão avançar" library="Login_Resource">
+<status status="NOT RUN" starttime="20230720 16:24:25.003" endtime="20230720 16:24:25.003"/>
+</kw>
+<status status="FAIL" starttime="20230720 16:24:22.811" endtime="20230720 16:24:25.004">Execution terminated by signal</status>
+</test>
+<test id="s1-t6" name="Tela 06 - Bens Direitos e Dividas" line="59">
+<tag>robot:exit</tag>
+<status status="FAIL" starttime="20230720 16:24:25.006" endtime="20230720 16:24:25.006">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t7" name="Tela 07 - Partilha" line="78">
+<tag>robot:exit</tag>
+<status status="FAIL" starttime="20230720 16:24:25.008" endtime="20230720 16:24:25.009">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t8" name="Tela 08 - Documentos anexos" line="82">
+<tag>robot:exit</tag>
+<status status="FAIL" starttime="20230720 16:24:25.010" endtime="20230720 16:24:25.011">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t9" name="Tela 09 - Envio" line="86">
+<tag>robot:exit</tag>
+<status status="FAIL" starttime="20230720 16:24:25.013" endtime="20230720 16:24:25.013">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t10" name="Tela 10 - Documento de arrecadacao estadual" line="92">
+<tag>robot:exit</tag>
+<status status="FAIL" starttime="20230720 16:24:25.015" endtime="20230720 16:24:25.017">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t11" name="Cancelando DBD via Endpoint" line="97">
+<tag>robot:exit</tag>
+<status status="FAIL" starttime="20230720 16:24:25.022" endtime="20230720 16:24:25.022">Test execution stopped due to a fatal error.</status>
+</test>
+<kw name="Fechar navegador" library="Login_Resource" type="TEARDOWN">
+<kw name="Tirando print para evidencias" library="Login_Resource">
+<kw name="Get Current Date" library="DateTime">
+<var>${DATA_ATUAL}</var>
+<arg>result_format=%Y.%m.%d_%H%M</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<msg timestamp="20230720 16:24:25.026" level="INFO">${DATA_ATUAL} = 2023.07.20_1624</msg>
+<status status="PASS" starttime="20230720 16:24:25.025" endtime="20230720 16:24:25.026"/>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<arg>${DATA_ATUAL}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<msg timestamp="20230720 16:24:25.026" level="INFO">${DATA_ATUAL} = 2023.07.20_1624</msg>
+<status status="PASS" starttime="20230720 16:24:25.026" endtime="20230720 16:24:25.026"/>
+</kw>
+<kw name="Create Directory" library="OperatingSystem">
+<arg>${EXECDIR}\\Evidencias\\${DATA_ATUAL}</arg>
+<doc>Creates the specified directory.</doc>
+<msg timestamp="20230720 16:24:25.027" level="INFO" html="true">Created directory '&lt;a href="file://Z:\Users\marcos.yamashita\Documents\Projetos\ITCD - SEF-MG - Robot Framework\Pages\Evidencias\2023.07.20_1624"&gt;Z:\Users\marcos.yamashita\Documents\Projetos\ITCD - SEF-MG - Robot Framework\Pages\Evidencias\2023.07.20_1624&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20230720 16:24:25.026" endtime="20230720 16:24:25.027"/>
+</kw>
+<kw name="Set Screenshot Directory" library="RPA.Browser.Selenium">
+<arg>${EXECDIR}\\Evidencias\\${DATA_ATUAL}</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" starttime="20230720 16:24:25.028" endtime="20230720 16:24:25.028"/>
+</kw>
+<kw name="Capture Page Screenshot" library="RPA.Browser.Selenium">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230720 16:24:25.028" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<status status="PASS" starttime="20230720 16:24:25.028" endtime="20230720 16:24:25.028"/>
+</kw>
+<status status="PASS" starttime="20230720 16:24:25.025" endtime="20230720 16:24:25.029"/>
+</kw>
+<kw name="Close Browser" library="RPA.Browser.Selenium">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230720 16:24:25.029" endtime="20230720 16:24:25.029"/>
+</kw>
+<status status="PASS" starttime="20230720 16:24:25.025" endtime="20230720 16:24:25.029"/>
+</kw>
+<doc>Criação de DBD com os Seguintes Parametros: Cenário com seguintes Bens: Fgts PIS/PASEP, Saldo de aplicações bancarias, Semovente e Outros</doc>
+<status status="FAIL" starttime="20230720 16:24:17.558" endtime="20230720 16:24:25.029"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="11" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="5" skip="0" info="combined" combined="NOT robot:exit">NOT robot:exit</stat>
+</tag>
+<suite>
+<stat pass="0" fail="11" skip="0" id="s1" name="CT22 Criar DBD Bem Fgts Pis e Saldo Contas Aplicações Bancarias e Semovente e Outros">CT22 Criar DBD Bem Fgts Pis e Saldo Contas Aplicações Bancarias e Semovente e Outros</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230720 16:24:17.610" level="WARN">Imported library 'selenium' contains no keywords.</msg>
+</errors>
+</robot>

@@ -1,0 +1,26 @@
+[
+    {
+        "CasoTeste": "Acessando conta ITCD - Conta gov",
+        "url_tst": "https://172.23.201.52:37100/user/login/sef",
+        "usuario_cpf": "44444444444",
+        "senha": "12345678",
+        "cpf_falecido":  "01057625639",
+        "cpf_falecido2":    "01364280612",
+        "data_obito": "",
+        "email_responsavel":  "teste@teste.com",
+        "cpf_conjuge":  "27956458668",
+        "cpf_testamentario":  "10506910830",
+        "cpf_filho":  "36050890897",
+        "cpf_filho_2":  "33333333333",
+        "cpf_avo":  "42538254604",
+        "cpf_pais": "00862013607",
+        "cpf_neto": "26879159800",
+        "cpf_filhounilateral":  "26417480615",
+        "cpf_outro":  "62155920644",
+        "cnpj_empresa": "60701190000104",
+        "usuario_analista": "01251552633",
+        "usuario_analista_almenara":    "40175995672",
+        "usuario_analista_riocasca":    "01251552633",
+        "usuario_analista_gestor":  "01313526606"
+    }
+]

@@ -1,0 +1,195 @@
+{"level":30,"time":"2023-07-14T00:25:19.812Z","pid":4024,"hostname":"CAMSTI135H","msg":"Listening on 65030"}
+{"level":30,"time":"2023-07-14T00:25:20.262Z","pid":4024,"hostname":"CAMSTI135H","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-14T00:25:20.262Z","pid":4024,"hostname":"CAMSTI135H","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-14T00:25:20.270Z","pid":4024,"hostname":"CAMSTI135H","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-14T00:25:20.271Z","pid":4024,"hostname":"CAMSTI135H","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (Z:\Users\marcos.yamashita\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\index.js:9406:15)
+    at PlaywrightServer.getActiveBrowser (Z:\Users\marcos.yamashita\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\index.js:9952:59)
+    at PlaywrightServer.setTimeout (Z:\Users\marcos.yamashita\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\index.js:10197:69)
+    at Z:\Users\marcos.yamashita\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (Z:\Users\marcos.yamashita\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-call.js:395:13)
+    at ServerHttp2Stream.onEnd (Z:\Users\marcos.yamashita\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-call.js:382:22)
+    at ServerHttp2Stream.emit (node:events:525:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2023-07-14T00:25:53.842Z","pid":4024,"hostname":"CAMSTI135H","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-14T00:25:53.842Z","pid":4024,"hostname":"CAMSTI135H","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-14T00:25:53.850Z","pid":4024,"hostname":"CAMSTI135H","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-14T00:25:53.850Z","pid":4024,"hostname":"CAMSTI135H","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (Z:\Users\marcos.yamashita\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\index.js:9406:15)
+    at PlaywrightServer.getActiveBrowser (Z:\Users\marcos.yamashita\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\index.js:9952:59)
+    at PlaywrightServer.setTimeout (Z:\Users\marcos.yamashita\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\index.js:10197:69)
+    at Z:\Users\marcos.yamashita\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (Z:\Users\marcos.yamashita\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-call.js:395:13)
+    at ServerHttp2Stream.onEnd (Z:\Users\marcos.yamashita\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-call.js:382:22)
+    at ServerHttp2Stream.emit (node:events:525:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2023-07-14T00:26:03.911Z","pid":4024,"hostname":"CAMSTI135H","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-14T00:26:03.911Z","pid":4024,"hostname":"CAMSTI135H","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-14T00:26:03.918Z","pid":4024,"hostname":"CAMSTI135H","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-14T00:26:03.919Z","pid":4024,"hostname":"CAMSTI135H","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (Z:\Users\marcos.yamashita\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\index.js:9406:15)
+    at PlaywrightServer.getActiveBrowser (Z:\Users\marcos.yamashita\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\index.js:9952:59)
+    at PlaywrightServer.setTimeout (Z:\Users\marcos.yamashita\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\index.js:10197:69)
+    at Z:\Users\marcos.yamashita\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (Z:\Users\marcos.yamashita\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-call.js:395:13)
+    at ServerHttp2Stream.onEnd (Z:\Users\marcos.yamashita\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-call.js:382:22)
+    at ServerHttp2Stream.emit (node:events:525:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2023-07-14T00:26:50.018Z","pid":4024,"hostname":"CAMSTI135H","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-14T00:26:50.018Z","pid":4024,"hostname":"CAMSTI135H","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-14T00:26:50.025Z","pid":4024,"hostname":"CAMSTI135H","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-14T00:26:50.025Z","pid":4024,"hostname":"CAMSTI135H","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (Z:\Users\marcos.yamashita\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\index.js:9406:15)
+    at PlaywrightServer.getActiveBrowser (Z:\Users\marcos.yamashita\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\index.js:9952:59)
+    at PlaywrightServer.setTimeout (Z:\Users\marcos.yamashita\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\index.js:10197:69)
+    at Z:\Users\marcos.yamashita\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (Z:\Users\marcos.yamashita\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-call.js:395:13)
+    at ServerHttp2Stream.onEnd (Z:\Users\marcos.yamashita\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-call.js:382:22)
+    at ServerHttp2Stream.emit (node:events:525:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2023-07-14T00:27:14.521Z","pid":4024,"hostname":"CAMSTI135H","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-14T00:27:14.521Z","pid":4024,"hostname":"CAMSTI135H","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-14T00:27:14.531Z","pid":4024,"hostname":"CAMSTI135H","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-14T00:27:14.531Z","pid":4024,"hostname":"CAMSTI135H","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (Z:\Users\marcos.yamashita\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\index.js:9406:15)
+    at PlaywrightServer.getActiveBrowser (Z:\Users\marcos.yamashita\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\index.js:9952:59)
+    at PlaywrightServer.setTimeout (Z:\Users\marcos.yamashita\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\index.js:10197:69)
+    at Z:\Users\marcos.yamashita\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (Z:\Users\marcos.yamashita\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-call.js:395:13)
+    at ServerHttp2Stream.onEnd (Z:\Users\marcos.yamashita\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-call.js:382:22)
+    at ServerHttp2Stream.emit (node:events:525:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2023-07-14T00:27:49.084Z","pid":4024,"hostname":"CAMSTI135H","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-14T00:27:49.084Z","pid":4024,"hostname":"CAMSTI135H","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-14T00:27:49.093Z","pid":4024,"hostname":"CAMSTI135H","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-14T00:27:49.093Z","pid":4024,"hostname":"CAMSTI135H","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (Z:\Users\marcos.yamashita\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\index.js:9406:15)
+    at PlaywrightServer.getActiveBrowser (Z:\Users\marcos.yamashita\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\index.js:9952:59)
+    at PlaywrightServer.setTimeout (Z:\Users\marcos.yamashita\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\index.js:10197:69)
+    at Z:\Users\marcos.yamashita\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (Z:\Users\marcos.yamashita\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-call.js:395:13)
+    at ServerHttp2Stream.onEnd (Z:\Users\marcos.yamashita\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-call.js:382:22)
+    at ServerHttp2Stream.emit (node:events:525:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2023-07-14T00:28:45.355Z","pid":4024,"hostname":"CAMSTI135H","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-14T00:28:45.355Z","pid":4024,"hostname":"CAMSTI135H","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-14T00:28:45.364Z","pid":4024,"hostname":"CAMSTI135H","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-14T00:28:45.364Z","pid":4024,"hostname":"CAMSTI135H","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (Z:\Users\marcos.yamashita\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\index.js:9406:15)
+    at PlaywrightServer.getActiveBrowser (Z:\Users\marcos.yamashita\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\index.js:9952:59)
+    at PlaywrightServer.setTimeout (Z:\Users\marcos.yamashita\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\index.js:10197:69)
+    at Z:\Users\marcos.yamashita\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (Z:\Users\marcos.yamashita\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-call.js:395:13)
+    at ServerHttp2Stream.onEnd (Z:\Users\marcos.yamashita\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-call.js:382:22)
+    at ServerHttp2Stream.emit (node:events:525:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2023-07-14T00:28:55.665Z","pid":4024,"hostname":"CAMSTI135H","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-14T00:28:55.665Z","pid":4024,"hostname":"CAMSTI135H","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-14T00:28:55.671Z","pid":4024,"hostname":"CAMSTI135H","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-14T00:28:55.672Z","pid":4024,"hostname":"CAMSTI135H","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (Z:\Users\marcos.yamashita\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\index.js:9406:15)
+    at PlaywrightServer.getActiveBrowser (Z:\Users\marcos.yamashita\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\index.js:9952:59)
+    at PlaywrightServer.setTimeout (Z:\Users\marcos.yamashita\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\index.js:10197:69)
+    at Z:\Users\marcos.yamashita\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (Z:\Users\marcos.yamashita\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-call.js:395:13)
+    at ServerHttp2Stream.onEnd (Z:\Users\marcos.yamashita\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-call.js:382:22)
+    at ServerHttp2Stream.emit (node:events:525:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2023-07-14T00:29:04.185Z","pid":4024,"hostname":"CAMSTI135H","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-14T00:29:04.185Z","pid":4024,"hostname":"CAMSTI135H","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-14T00:29:04.191Z","pid":4024,"hostname":"CAMSTI135H","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-14T00:29:04.192Z","pid":4024,"hostname":"CAMSTI135H","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (Z:\Users\marcos.yamashita\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\index.js:9406:15)
+    at PlaywrightServer.getActiveBrowser (Z:\Users\marcos.yamashita\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\index.js:9952:59)
+    at PlaywrightServer.setTimeout (Z:\Users\marcos.yamashita\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\index.js:10197:69)
+    at Z:\Users\marcos.yamashita\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (Z:\Users\marcos.yamashita\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-call.js:395:13)
+    at ServerHttp2Stream.onEnd (Z:\Users\marcos.yamashita\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-call.js:382:22)
+    at ServerHttp2Stream.emit (node:events:525:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2023-07-14T00:29:14.034Z","pid":4024,"hostname":"CAMSTI135H","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-14T00:29:14.034Z","pid":4024,"hostname":"CAMSTI135H","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-14T00:29:14.042Z","pid":4024,"hostname":"CAMSTI135H","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-14T00:29:14.042Z","pid":4024,"hostname":"CAMSTI135H","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (Z:\Users\marcos.yamashita\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\index.js:9406:15)
+    at PlaywrightServer.getActiveBrowser (Z:\Users\marcos.yamashita\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\index.js:9952:59)
+    at PlaywrightServer.setTimeout (Z:\Users\marcos.yamashita\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\index.js:10197:69)
+    at Z:\Users\marcos.yamashita\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (Z:\Users\marcos.yamashita\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-call.js:395:13)
+    at ServerHttp2Stream.onEnd (Z:\Users\marcos.yamashita\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-call.js:382:22)
+    at ServerHttp2Stream.emit (node:events:525:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2023-07-14T00:29:18.108Z","pid":4024,"hostname":"CAMSTI135H","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-14T00:29:18.108Z","pid":4024,"hostname":"CAMSTI135H","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-14T00:29:18.115Z","pid":4024,"hostname":"CAMSTI135H","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-14T00:29:18.115Z","pid":4024,"hostname":"CAMSTI135H","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (Z:\Users\marcos.yamashita\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\index.js:9406:15)
+    at PlaywrightServer.getActiveBrowser (Z:\Users\marcos.yamashita\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\index.js:9952:59)
+    at PlaywrightServer.setTimeout (Z:\Users\marcos.yamashita\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\index.js:10197:69)
+    at Z:\Users\marcos.yamashita\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (Z:\Users\marcos.yamashita\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-call.js:395:13)
+    at ServerHttp2Stream.onEnd (Z:\Users\marcos.yamashita\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-call.js:382:22)
+    at ServerHttp2Stream.emit (node:events:525:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2023-07-14T00:29:18.945Z","pid":4024,"hostname":"CAMSTI135H","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-14T00:29:18.945Z","pid":4024,"hostname":"CAMSTI135H","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (Z:\Users\marcos.yamashita\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\index.js:9406:15)
+    at PlaywrightServer.getActiveBrowser (Z:\Users\marcos.yamashita\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\index.js:9952:59)
+    at PlaywrightServer.setTimeout (Z:\Users\marcos.yamashita\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\index.js:10197:69)
+    at Z:\Users\marcos.yamashita\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (Z:\Users\marcos.yamashita\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-call.js:395:13)
+    at ServerHttp2Stream.onEnd (Z:\Users\marcos.yamashita\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-call.js:382:22)
+    at ServerHttp2Stream.emit (node:events:525:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2023-07-14T00:29:22.987Z","pid":4024,"hostname":"CAMSTI135H","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-14T00:29:22.987Z","pid":4024,"hostname":"CAMSTI135H","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-14T00:29:25.370Z","pid":4024,"hostname":"CAMSTI135H","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2023-07-14T00:29:25.371Z","pid":4024,"hostname":"CAMSTI135H","msg":"End of node method closeAllBrowsers"}

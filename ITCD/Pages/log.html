@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta content="Robot Framework 5.0.1 (Python 3.11.2 on win32)" name="Generator">
+<link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKcAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAAqAAAAAAAAAAAAAAAAAAAALIAAAD/AAAA4AAAANwAAADcAAAA3AAAANwAAADcAAAA3AAAANwAAADcAAAA4AAAAP8AAACxAAAAAAAAAKYAAAD/AAAAuwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC/AAAA/wAAAKkAAAD6AAAAzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAN8AAAD/AAAA+gAAAMMAAAAAAAAAAgAAAGsAAABrAAAAawAAAGsAAABrAAAAawAAAGsAAABrAAAADAAAAAAAAADaAAAA/wAAAPoAAADDAAAAAAAAAIsAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAANEAAAAAAAAA2gAAAP8AAAD6AAAAwwAAAAAAAAAAAAAAMgAAADIAAAAyAAAAMgAAADIAAAAyAAAAMgAAADIAAAAFAAAAAAAAANoAAAD/AAAA+gAAAMMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADaAAAA/wAAAPoAAADDAAAAAAAAADwAAAB8AAAAAAAAAGAAAABcAAAAAAAAAH8AAABKAAAAAAAAAAAAAAAAAAAA2gAAAP8AAAD6AAAAwwAAAAAAAADCAAAA/wAAACkAAADqAAAA4QAAAAAAAAD7AAAA/wAAALAAAAAGAAAAAAAAANoAAAD/AAAA+gAAAMMAAAAAAAAAIwAAAP4AAAD/AAAA/wAAAGAAAAAAAAAAAAAAAMkAAAD/AAAAigAAAAAAAADaAAAA/wAAAPoAAADDAAAAAAAAAAAAAAAIAAAAcAAAABkAAAAAAAAAAAAAAAAAAAAAAAAAEgAAAAAAAAAAAAAA2gAAAP8AAAD7AAAAywAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAN4AAAD/AAAAqwAAAP8AAACvAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALIAAAD/AAAAsgAAAAAAAAC5AAAA/wAAAMoAAADAAAAAwAAAAMAAAADAAAAAwAAAAMAAAADAAAAAwAAAAMkAAAD/AAAAvAAAAAAAAAAAAAAAAAAAAKwAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAArQAAAAAAAAAAwAMAAIABAAAf+AAAP/wAAD/8AAAgBAAAP/wAAD/8AAA//AAAJIwAADHEAAA//AAAP/wAAB/4AACAAQAAwAMAAA==">
+<style media="all" type="text/css">
+/* Generic and misc styles */
+body {
+    font-family: Helvetica, sans-serif;
+    font-size: 0.8em;
+    color: black;
+    padding: 6px;
+    background: white;
+}
+table {
+    table-layout: fixed;
+    word-wrap: break-word;
+    empty-cells: show;
+    font-size: 1em;
+}
+th, td {
+    vertical-align: top;
+}
+br {
+    mso-data-placement: same-cell; /* maintain line breaks in Excel */
+}
+hr {
+    background: #ccc;
+    height: 1px;
+    border: 0;
+}
+a, a:link, a:visited {
+    text-decoration: none;
+    color: #15c;
+}
+a > img {
+    border: 1px solid #15c !important;
+}
+a:hover, a:active {
+    text-decoration: underline;
+    color: #61c;
+}
+.parent-name {
+    font-size: 0.7em;
+    letter-spacing: -0.07em;
+}
+.message {
+    white-space: pre-wrap;
+}
+/* Headers */
+#header {
+    width: 65em;
+    height: 3em;
+    margin: 6px 0;
+}
+h1 {
+    float: left;
+    margin: 0 0 0.5em 0;
+    width: 75%;
+}
+h2 {
+    clear: left;
+}
+#generated {
+    float: right;
+    text-align: right;
+    font-size: 0.9em;
+    white-space: nowrap;
+}
+/* Documentation headers */
+.doc > h2 {
+    font-size: 1.2em;
+}
+.doc > h3 {
+    font-size: 1.1em;
+}
+.doc > h4 {
+    font-size: 1.0em;
+}
+/* Status text colors -- !important allows using them in links */
+.fail {
+    color: #ce3e01 !important;
+    font-weight: bold;
+}
+.pass {
+    color: #098a09 !important;
+}
+.skip {
+    color: #927201 !important;
+    font-weight: bold;
+}
+.label {
+    padding: 2px 5px;
+    font-size: 0.75em;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    color: black;
+    background-color: #ddd;
+    border-radius: 3px;
+}
+.label.debug, .label.trace, .label.error, .label.keyword {
+    letter-spacing: 0;
+}
+.label.pass, .label.fail, .label.error, .label.skip, .label.warn {
+    font-weight: bold;
+}
+.label.pass {
+    background-color: #97bd61;
+    color: #000 !important;
+}
+.label.fail, .label.error {
+    background-color: #ce3e01;
+    color: #fff !important;
+}
+.label.skip, .label.warn {
+    background-color: #fed84f;
+    color: #000 !important;
+}
+/* Top right header */
+#top-right-header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    width: 12em;
+    text-align: center;
+}
+#report-or-log-link a {
+    display: block;
+    background: black;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    padding: 0.3em 0;
+    border-bottom-left-radius: 4px;
+}
+#report-or-log-link a:hover {
+    color: #ddd;
+}
+#log-level-selector {
+    padding: 0.3em 0;
+    font-size: 0.9em;
+    border-bottom-left-radius: 4px;
+    background: #ddd;
+}
+/* Statistics table */
+.statistics {
+    width: 65em;
+    border-collapse: collapse;
+    empty-cells: show;
+    margin-bottom: 1em;
+}
+.statistics tr:hover {
+    background: #f4f4f4;
+    cursor: pointer;
+}
+.statistics th, .statistics td {
+    border: 1px solid #ccc;
+    padding: 0.1em 0.3em;
+}
+.statistics th {
+    background-color: #ddd;
+    padding: 0.2em 0.3em;
+}
+.statistics td {
+    vertical-align: middle;
+}
+.stats-col-stat {
+    width: 4.5em;
+    text-align: center;
+}
+.stats-col-elapsed {
+    width: 5.5em;
+    text-align: center;
+}
+.stats-col-graph {
+    width: 9em;
+}
+th.stats-col-graph:hover {
+    cursor: default;
+}
+.stat-name {
+    float: left;
+}
+.stat-name a, .stat-name span {
+    font-weight: bold;
+}
+.tag-links {
+    font-size: 0.9em;
+    float: right;
+    margin-top: 0.05em;
+}
+.tag-links span {
+    margin-left: 0.2em;
+}
+/* Statistics graph */
+.graph, .empty-graph {
+    border: 1px solid #ccc;
+    width: auto;
+    height: 7px;
+    padding: 0;
+    background: #aaa;
+}
+.empty-graph {
+    background: #eee;
+}
+.pass-bar, .fail-bar, .skip-bar {
+    float: left;
+    height: 100%;
+}
+.fail-bar {
+    background: #ce3e01;
+}
+.pass-bar {
+    background: #97bd61;
+}
+.skip-bar {
+    background: #fed84f;
+}
+/* Tablesorter - adapted from provided Blue Skin */
+.tablesorter-header {
+    background-image: url(data:image/gif;base64,R0lGODlhCwAJAIAAAH9/fwAAACH5BAEAAAEALAAAAAALAAkAAAIRjAOnBr3cnIr0WUjTrC9e9BQAOw==);
+    background-repeat: no-repeat;
+    background-position: center right;
+    cursor: pointer;
+}
+.tablesorter-header:hover {
+    background-color: #ccc;
+}
+.tablesorter-headerAsc {
+    background-image: url(data:image/gif;base64,R0lGODlhCwAJAKEAAAAAAH9/fwAAAAAAACH5BAEAAAIALAAAAAALAAkAAAIUlBWnFr3cnIr0WQOyBmvzp13CpxQAOw==);
+    background-color: #ccc !important;
+}
+.tablesorter-headerDesc {
+    background-image: url(data:image/gif;base64,R0lGODlhCwAJAKEAAAAAAH9/fwAAAAAAACH5BAEAAAIALAAAAAALAAkAAAIUlAWnBr3cnIr0WROyDmvzp13CpxQAOw==);
+    background-color: #ccc !important;
+}
+.sorter-false {
+    background-image: none;
+    cursor: default;
+}
+.sorter-false:hover {
+    background-color: #ddd;
+}
+</style>
+<style media="all" type="text/css">
+/* Icons are from Open Iconic <https://useiconic.com/open/>.
+   Licensed under the MIT License. */
+/* Containers */
+.suite, .test, #errors {
+    border: 1px solid #ccc;
+    padding: 0.3em 0.2em;
+    margin: 0.2em 0;
+}
+.test {
+    border-style: dashed;
+}
+#errors, .messages {
+    width: 100%;
+    border-spacing: 0;
+}
+.children {
+    display: none;
+    margin-left: 1.4em;
+}
+.suite, .test, .keyword {
+    margin-left: -0.2em;
+}
+#s1, .suite > .children > .keyword {
+    margin-left: 0;
+}
+/* Suite, test and kw headers */
+.element-header {
+    border: 1px solid transparent;
+    border-radius: 2px;
+    position: relative;
+}
+.element-header:hover {
+    cursor: pointer;
+    background-color: #eee;
+    border-color: #ccc;
+}
+.element-header-toggle {
+    position: absolute;
+    left: 3px;
+    top: 5px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxMAAAsTAQCanBgAAAAHdElNRQfeCR0JChSkZz20AAAAGklEQVQI12NgQAKMDKzInP8IDhOqMk4G7AAANQwBE427PYUAAAAASUVORK5CYII=);
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiIHZpZXdCb3g9IjAgMCA4IDgiPgogIDxwYXRoIGQ9Ik0wIDB2Mmg4di0yaC04eiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAzKSIgLz4KPC9zdmc+), none;
+    height: 10px;
+    width: 10px;
+    background-size: 6px 6px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+}
+.closed > .element-header-toggle {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxMAAAsTAQCanBgAAAAHdElNRQfeCR0JCDHdVYtxAAAAM0lEQVQI103MMQqAMBQFwVHyITaB3P+W1sKzSBC3mW6hRFw0pUB5DvF1bu9FN0RM3X/wAk98CUnvFTakAAAAAElFTkSuQmCC);
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiIHZpZXdCb3g9IjAgMCA4IDgiPgogIDxwYXRoIGQ9Ik0zIDB2M2gtM3YyaDN2M2gydi0zaDN2LTJoLTN2LTNoLTJ6IiAvPgo8L3N2Zz4=), none;
+}
+.element-header:hover > .element-header-toggle {
+    background-color: #ccc;
+}
+.element-header-right:hover ~ .element-header-toggle {
+    background-color: transparent;
+}
+.element-header-left {
+    padding: 3px 80px 3px 20px;
+}
+.element-header-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 3px;
+    cursor: default;
+}
+.element-header .label {
+    margin-right: 0.5em;
+}
+.name {
+    font-weight: bold;
+}
+.elapsed {
+    float: right;
+    color: #666;
+    padding-left: 1em;
+}
+.link {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEwAACxMBAJqcGAAAAHlJREFUGJVtzrEJwmAQBtCn6ASuIKTIBhY2gmghBiJYB1udwk10B8FJbKMBcQFbtbkfJHrVwfu+4/idJR64Y9H7E3higj5O3S8Y44ApLnjhnXCNGhV2yNGggDJwiC02gavUbpDFvscRo4QdXOMKDHBufz3HLYKzNn4AbSkV3fncGQYAAAAASUVORK5CYII=);
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiIHZpZXdCb3g9IjAgMCA4IDgiPgogIDxwYXRoIGQ9Ik01Ljg4LjAzYy0uMTguMDEtLjM2LjAzLS41My4wOS0uMjcuMS0uNTMuMjUtLjc1LjQ3YS41LjUgMCAxIDAgLjY5LjY5Yy4xMS0uMTEuMjQtLjE3LjM4LS4yMi4zNS0uMTIuNzgtLjA3IDEuMDYuMjIuMzkuMzkuMzkgMS4wNCAwIDEuNDRsLTEuNSAxLjVjLS40NC40NC0uOC40OC0xLjA2LjQ3LS4yNi0uMDEtLjQxLS4xMy0uNDEtLjEzYS41LjUgMCAxIDAtLjUuODhzLjM0LjIyLjg0LjI1Yy41LjAzIDEuMi0uMTYgMS44MS0uNzhsMS41LTEuNWMuNzgtLjc4Ljc4LTIuMDQgMC0yLjgxLS4yOC0uMjgtLjYxLS40NS0uOTctLjUzLS4xOC0uMDQtLjM4LS4wNC0uNTYtLjAzem0tMiAyLjMxYy0uNS0uMDItMS4xOS4xNS0xLjc4Ljc1bC0xLjUgMS41Yy0uNzguNzgtLjc4IDIuMDQgMCAyLjgxLjU2LjU2IDEuMzYuNzIgMi4wNi40Ny4yNy0uMS41My0uMjUuNzUtLjQ3YS41LjUgMCAxIDAtLjY5LS42OWMtLjExLjExLS4yNC4xNy0uMzguMjItLjM1LjEyLS43OC4wNy0xLjA2LS4yMi0uMzktLjM5LS4zOS0xLjA0IDAtMS40NGwxLjUtMS41Yy40LS40Ljc1LS40NSAxLjAzLS40NC4yOC4wMS40Ny4wOS40Ny4wOWEuNS41IDAgMSAwIC40NC0uODhzLS4zNC0uMi0uODQtLjIyeiIKICAvPgo8L3N2Zz4=), none;
+}
+.expand {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEwAACxMBAJqcGAAAADtJREFUGJVjYCACKDAwMByA0ljFDjAwMPxnYGB4ABVQgLL/Q+VQBB6gseGmIivCkERXhFUSWRFOSawAAEl7E3uv1iMcAAAAAElFTkSuQmCC);
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiIHZpZXdCb3g9IjAgMCA4IDgiPgogIDxwYXRoIGQ9Ik0xLjUgMGwtMS41IDEuNSA0IDQgNC00LTEuNS0xLjUtMi41IDIuNS0yLjUtMi41eiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAxKSIgLz4KPC9zdmc+), none;
+}
+.collapse {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEwAACxMBAJqcGAAAAC5JREFUGJVjYCARNEAxTsn/UIyhCFkSQxG6ThQ+C5IpjWhG1yNb4YDFTdjEMAEACi8Q++9Y9TAAAAAASUVORK5CYII=);
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiIHZpZXdCb3g9IjAgMCA4IDgiPgogIDxwYXRoIGQ9Ik00IDBsLTQgNCAxLjUgMS41IDIuNS0yLjUgMi41IDIuNSAxLjUtMS41LTQtNHoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgMSkiIC8+Cjwvc3ZnPg==), none;
+}
+.expand, .collapse, .link {
+    float: left;
+    display: block;
+    visibility: hidden;
+    margin: 0 4px;
+    height: 14px;
+    width: 14px;
+    background-size: 8px 8px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+}
+.link {
+    background-size: 10px 10px;
+}
+.element-header:hover a {
+    visibility: visible;
+}
+.expand:hover, .collapse:hover, .link:hover {
+    background-color: #ccc;
+}
+/* Messages and errors */
+.messages .time, .messages .message {
+    font-family: monospace;
+    font-size: 1.1em;
+}
+#errors .message {
+    font-family: monospace;
+    font-size: 1.2em;
+}
+.message-row {
+    height: 20px;
+}
+.time {
+    width: 7.5em;
+}
+.error-time {
+    width: 11em;
+    font-size: 0.9em;
+    white-space: nowrap;
+}
+.level {
+    width: 5em;
+    text-align: center;
+}
+.select-message {
+    width: 24px;
+}
+.select-message > div {
+    float: right;
+    margin-right: 2px;
+    height: 16px;
+    width: 16px;
+    background-size: 12px 12px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.message-row:hover .select-message div {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAQAAAD8fJRsAAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxMAAAsTAQCanBgAAAAHdElNRQfeCR0MOzhWKZQOAAAASUlEQVQY032PsRHAIAwDX9BkicD+W8UMEqegAQJWKZ/+3sLZJhFGQEZzNaIa4ibh66En867VNaIeoP5WppNuIGoAlOm3g5VC1AdYeQv1BZPRSgAAAABJRU5ErkJggg==);
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiIHZpZXdCb3g9IjAgMCA4IDgiPgogIDxwYXRoIGQ9Ik0wIDB2MWg4di0xaC04em0wIDJ2MWg2di0xaC02em0wIDJ2MWg4di0xaC04em0wIDJ2MWg2di0xaC02eiIgLz4KPC9zdmc+), none;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+}
+.select-message:hover div {
+    background-color: #ccc;
+    cursor: pointer;
+}
+/* Message tables - these MUST NOT be combined together because otherwise
+   dynamically altering them based on visible log level is not possible. */
+.trace-message {
+    display: table;
+}
+.debug-message {
+    display: table;
+}
+/* Metadata */
+.metadata {
+    width: 100%;
+    border-spacing: 0.2em;
+}
+.metadata th {
+    width: 12em;
+    vertical-align: top;
+    text-align: left;
+}
+.metadata td {
+    vertical-align: top;
+}
+.keyword-metadata {
+    font-size: 0.9em;
+}
+/* Custom styles for statistics */
+#total-stats tr:hover, #tag-stats tr:hover {
+    cursor: default;
+}
+</style>
+<style media="print" type="text/css">
+body {
+    background: white !important;
+    padding: 0;
+    font-size: 8pt;
+}
+a:link, a:visited {
+    color: black;
+}
+#header {
+    width: auto;
+}
+.details, .statistics {
+    width: 100%;
+}
+#generated-ago, #top-right-header, #normal-selector, #search-buttons,
+.folding-button, .expand, .hidden, .details-col-toggle {
+    display: none;
+}
+.element-header-text, .children {
+    margin: 0;
+}
+#test-details {
+    border-collapse: collapse;
+    background: white;
+}
+#test-details th, #test-details td {
+    border: 1px solid #ccc;
+}
+.details-col-header {
+    padding: 0;
+}
+#print-selector {
+    display: table-cell;
+}
+.tablesorter-header {
+    background-image: none;
+    background: #ddd !important;
+}
+</style>
+<style media="all" type="text/css">
+#javascript-disabled {
+    width: 600px;
+    margin: 100px auto 0 auto;
+    padding: 20px;
+    color: black;
+    border: 1px solid #ccc;
+    background: #eee;
+}
+#javascript-disabled h1 {
+    width: 100%;
+    float: none;
+}
+#javascript-disabled ul {
+    font-size: 1.2em;
+}
+#javascript-disabled li {
+    margin: 0.5em 0;
+}
+#javascript-disabled b {
+    font-style: italic;
+}
+</style>
+<style media="all" type="text/css">
+.doc > * {
+    margin: 0.7em 1em 0.1em 1em;
+    padding: 0;
+}
+.doc > p, .doc > h1, .doc > h2, .doc > h3, .doc > h4 {
+    margin: 0.7em 0 0.1em 0;
+}
+.doc > *:first-child {
+    margin-top: 0.1em;
+}
+.doc table {
+    border: 1px solid #ccc;
+    background: transparent;
+    border-collapse: collapse;
+    empty-cells: show;
+    font-size: 0.9em;
+}
+.doc table th, .doc table td {
+    border: 1px solid #ccc;
+    background: transparent;
+    padding: 0.1em 0.3em;
+    height: 1.2em;
+}
+.doc table th {
+    text-align: center;
+    letter-spacing: 0.1em;
+}
+.doc pre {
+    font-size: 1.1em;
+    letter-spacing: 0.05em;
+    background: #f4f4f4;
+}
+.doc code {
+    padding: 0 0.2em;
+    letter-spacing: 0.05em;
+    background: #eee;
+}
+.doc li {
+    list-style-position: inside;
+    list-style-type: square;
+}
+.doc img {
+    border: 1px solid #ccc;
+}
+.doc hr {
+    background: #ccc;
+    height: 1px;
+    border: 0;
+}
+</style>
+<script type="text/javascript">
+var LEVELS = {TRACE: 0, DEBUG: 1, INFO: 2, WARN: 3, FAIL: 4, NONE: 5};
+function toggleSuite(suiteId) {
+    toggleElement(suiteId, ['keyword', 'suite', 'test']);
+}
+function toggleTest(testId) {
+    toggleElement(testId, ['keyword']);
+}
+function toggleKeyword(kwId) {
+    toggleElement(kwId, ['keyword']);
+}
+function toggleElement(elementId, childrenNames) {
+    var element = $('#' + elementId);
+    var children = element.children('.children');
+    children.toggle(100, '', function () {
+        element.children('.element-header').toggleClass('closed');
+    });
+    populateChildren(elementId, children, childrenNames);
+}
+function populateChildren(elementId, childElement, childrenNames) {
+    if (!childElement.hasClass('populated')) {
+        var element = window.testdata.findLoaded(elementId);
+        var callback = drawCallback(element, childElement, childrenNames);
+        element.callWhenChildrenReady(callback);
+        childElement.addClass('populated');
+    }
+}
+function drawCallback(element, childElement, childrenNames) {
+    return function () {
+        util.map(childrenNames, function (childName) {
+            var children = element[childName + 's']();
+            util.map(children, function (child) {
+                $.tmpl(child.template, child).appendTo(childElement);
+            });
+        });
+    }
+}
+function expandSuite(suite) {
+    if (suite.status == "FAIL")
+        expandFailed(suite);
+    else
+        expandElement(suite);
+}
+function expandElement(item, retryCount) {
+    retryCount = typeof retryCount !== 'undefined' ? retryCount : 3;
+    var element = $('#' + item.id);
+    var children = element.children('.children');
+    // .css is faster than .show and .show w/ callback is terribly slow
+    children.css({'display': 'block'});
+    // in rare cases on large logs concurrent expanding fails => retry
+    if (children.css('display') != 'block' && retryCount > 0) {
+        console.debug('expandElement '+item.id+' failed! planning retry...');
+        setTimeout(function() { expandElement(item, retryCount-1); }, 0);
+        return;
+    }
+    populateChildren(item.id, children, item.childrenNames);
+    element.children('.element-header').removeClass('closed');
+}
+function expandElementWithId(elementid) {
+    expandElement(window.testdata.findLoaded(elementid));
+}
+function expandElementsWithIds(ids) {
+    util.map(ids, expandElementWithId);
+}
+function loadAndExpandElementIds(ids) {
+    for (var i in ids) {
+        window.testdata.ensureLoaded(ids[i], expandElementsWithIds);
+    }
+}
+function expandFailed(element) {
+    if (element.status == "FAIL") {
+        window.elementsToExpand = [element];
+        window.expandDecider = function (e) {
+            return e.status == "FAIL";
+        };
+        expandRecursively();
+    }
+}
+function expandAll(elementId) {
+    window.elementsToExpand = [window.testdata.findLoaded(elementId)];
+    window.expandDecider = function () { return true; };
+    expandRecursively();
+}
+function expandRecursively() {
+    if (!window.elementsToExpand.length)
+        return;
+    var element = window.elementsToExpand.pop();
+    if (!element || elementHiddenByUser(element.id)) {
+        window.elementsToExpand = [];
+        return;
+    }
+    expandElement(element);
+    element.callWhenChildrenReady(function () {
+        var children = element.children();
+        for (var i = children.length-1; i >= 0; i--) {
+            var child = children[i];
+            if (child.type != 'message' && window.expandDecider(child))
+                window.elementsToExpand.push(child);
+        }
+        if (window.elementsToExpand.length)
+            setTimeout(expandRecursively, 0);
+    });
+}
+function elementHiddenByUser(id) {
+    var element = $('#' + id);
+    return !element.is(":visible");
+}
+function collapseAll(id) {
+    var element = $('#' + id);
+    element.find('.children').css({'display': 'none'});
+    element.find('.element-header').addClass('closed');
+}
+function logLevelSelected(level) {
+    var anchors = getViewAnchorElements();
+    setMessageVisibility(level);
+    scrollToShortestVisibleAnchorElement(anchors);
+}
+function getViewAnchorElements() {
+    var elem1 = $(document.elementFromPoint(100, 0));
+    var elem2 = $(document.elementFromPoint(100, 20));
+    return [elem1, elem2];
+}
+function scrollToShortestVisibleAnchorElement(anchors) {
+    anchors = util.map(anchors, closestVisibleParent);
+    var shortest = anchors[0];
+    for (var i = 1; i < anchors.length; i++)
+        if (shortest.height() > anchors[i].height())
+            shortest = anchors[i];
+    shortest.get()[0].scrollIntoView(true);
+}
+function setMessageVisibility(level) {
+    level = parseInt(level);
+    changeClassDisplay(".trace-message", level <= LEVELS.TRACE);
+    changeClassDisplay(".debug-message", level <= LEVELS.DEBUG);
+    changeClassDisplay(".info-message", level <= LEVELS.INFO);
+}
+function closestVisibleParent(elem) {
+    while (!elem.is(":visible"))
+        elem = elem.parent();
+    return elem;
+}
+function changeClassDisplay(clazz, visible) {
+    var styles = document.styleSheets;
+    for (var i = 0; i < styles.length; i++) {
+        var rules = getRules(styles[i]);
+        if (rules === null)
+            continue;
+        for (var j = 0; j < rules.length; j++)
+            if (rules[j].selectorText === clazz)
+                rules[j].style.display = visible ? "table" : "none";
+    }
+}
+function getRules(style) {
+    // With Chrome external CSS files seem to have only null roles and with
+    // Firefox accessing rules can result to security error.
+    // Neither of these are a problem on with generated logs.
+    try {
+        return style.cssRules || style.rules;
+    } catch (e) {
+        return null;
+    }
+}
+function selectMessage(parentId) {
+    var element = $('#' + parentId).find('.message').get(0);
+    selectText(element);
+}
+function selectText(element) {
+    // Based on http://stackoverflow.com/questions/985272
+    var range, selection;
+    if (document.body.createTextRange) {  // IE 8
+        range = document.body.createTextRange();
+        range.moveToElementText(element);
+        range.select();
+    } else if (window.getSelection) {  // Others
+        selection = window.getSelection();
+        range = document.createRange();
+        range.selectNodeContents(element);
+        selection.removeAllRanges();
+        selection.addRange(range);
+    }
+}
+function LogLevelController(minLevel, defaultLevel) {
+    minLevel = LEVELS[minLevel];
+    defaultLevel = LEVELS[defaultLevel];
+    function showLogLevelSelector() {
+        return minLevel < LEVELS.INFO;
+    }
+    function defaultLogLevel() {
+        if (minLevel > defaultLevel)
+            return minLevel;
+        return defaultLevel;
+    }
+    function showTrace() {
+        return minLevel == LEVELS.TRACE;
+    }
+    return {
+        showLogLevelSelector: showLogLevelSelector,
+        defaultLogLevel: defaultLogLevel,
+        showTrace: showTrace
+    };
+}
+</script>
+<script type="text/javascript">
+/*! jQuery v3.5.1 | (c) JS Foundation and other contributors | jquery.org/license */

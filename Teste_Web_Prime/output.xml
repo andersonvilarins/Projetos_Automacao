@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20231007 16:17:29.144" rpa="false" schemaversion="4">
+<suite id="s1" name="Abrirsite" source="f:\Projeto_Robot\Teste_Web_Prime\1.testsuit\abrirsite.robot">
+<test id="s1-t1" name="Caso de teste 1 - Realizar a alteração de informações do cadastro" line="11">
+<kw name="Iniciar conexão com o Site" library="conexaoWeb" type="SETUP">
+<kw name="Log" library="BuiltIn">
+<arg>Iniciando conexão...</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231007 16:17:29.676" level="INFO">Iniciando conexão...</msg>
+<status status="PASS" starttime="20231007 16:17:29.675" endtime="20231007 16:17:29.680"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Iniciando a conexão...</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231007 16:17:29.681" endtime="20231007 16:17:29.683"/>
+</kw>
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20231007 16:17:29.684" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20231007 16:17:29.684" endtime="20231007 16:17:32.899"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://opensource-demo.orangehrmlive.com/web/index.php/auth/login</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20231007 16:17:32.900" level="INFO">Opening url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'</msg>
+<status status="PASS" starttime="20231007 16:17:32.900" endtime="20231007 16:17:37.756"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231007 16:17:37.757" endtime="20231007 16:17:37.884"/>
+</kw>
+<status status="PASS" starttime="20231007 16:17:29.674" endtime="20231007 16:17:37.884"/>
+</kw>
+<kw name="Dado que o usuário esteja no site &quot;Open Source Demo&quot;" library="abrirSite._steps">
+<kw name="Validação de tela do site Open Source Demo" library="abrirSite._steps">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Iniciando Validação de tela do site Open Source Demo</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231007 16:17:37.891" endtime="20231007 16:17:37.893"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Login</arg>
+<arg>30</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231007 16:17:37.893" endtime="20231007 16:17:38.255"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Username</arg>
+<arg>30</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231007 16:17:38.255" endtime="20231007 16:17:38.281"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Password</arg>
+<arg>30</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231007 16:17:38.281" endtime="20231007 16:17:38.308"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>telaInicial.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231007 16:17:38.798" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="telaInicial.png"&gt;&lt;img src="telaInicial.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231007 16:17:38.308" endtime="20231007 16:17:38.799"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Validação concluída!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231007 16:17:38.800" endtime="20231007 16:17:38.801"/>
+</kw>
+<status status="PASS" starttime="20231007 16:17:37.891" endtime="20231007 16:17:38.801"/>
+</kw>
+<kw name="Informo um usuário e senha válidos" library="metodo_abrirSite">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${campo_Username}</arg>
+<arg>${Usermane}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231007 16:17:38.803" level="INFO">Typing text 'Admin' into text field 'xpath=//input[contains(@name,'username')]'.</msg>
+<status status="PASS" starttime="20231007 16:17:38.802" endtime="20231007 16:17:38.947"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${campo_Password}</arg>
+<arg>${Password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231007 16:17:38.950" level="INFO">Typing text 'admin123' into text field 'xpath=//input[contains(@type,'password')]'.</msg>
+<status status="PASS" starttime="20231007 16:17:38.948" endtime="20231007 16:17:39.092"/>
+</kw>
+<status status="PASS" starttime="20231007 16:17:38.802" endtime="20231007 16:17:39.092"/>
+</kw>
+<kw name="E clico no botão Login" library="metodo_abrirSite">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231007 16:17:39.094" level="INFO">Clicking element 'xpath=//button[@type='submit'][contains(.,'Login')]'.</msg>
+<status status="PASS" starttime="20231007 16:17:39.093" endtime="20231007 16:17:39.172"/>
+</kw>
+<status status="PASS" starttime="20231007 16:17:39.093" endtime="20231007 16:17:39.173"/>
+</kw>
+<status status="PASS" starttime="20231007 16:17:37.884" endtime="20231007 16:17:39.173"/>
+</kw>
+<kw name="E clicar em “My Info”" library="abrirSite._steps">
+<kw name="Validação de tela do Dashboard do site Open Source Demo" library="abrirSite._steps">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Iniciando Validação de tela do Dashboard do site Open Source Demo</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231007 16:17:39.176" endtime="20231007 16:17:39.177"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Admin</arg>
+<arg>30</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231007 16:17:39.178" endtime="20231007 16:17:41.909"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Leave</arg>
+<arg>30</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231007 16:17:41.910" endtime="20231007 16:17:41.939"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>My Info</arg>
+<arg>30</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231007 16:17:41.939" endtime="20231007 16:17:41.962"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>darsboard.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231007 16:17:42.210" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="darsboard.png"&gt;&lt;img src="darsboard.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231007 16:17:41.963" endtime="20231007 16:17:42.210"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Validação concluída!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231007 16:17:42.211" endtime="20231007 16:17:42.214"/>
+</kw>
+<status status="PASS" starttime="20231007 16:17:39.175" endtime="20231007 16:17:42.214"/>
+</kw>
+<kw name="E clico no menu &quot;My Info&quot;" library="metodo_abrirSite">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${menu_MyInfo}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231007 16:17:42.217" level="INFO">Clicking element 'xpath=//span[@class='oxd-text oxd-text--span oxd-main-menu-item--name'][contains(.,'My Info')]'.</msg>
+<status status="PASS" starttime="20231007 16:17:42.215" endtime="20231007 16:17:44.128"/>
+</kw>
+<status status="PASS" starttime="20231007 16:17:42.215" endtime="20231007 16:17:44.129"/>
+</kw>
+<status status="PASS" starttime="20231007 16:17:39.174" endtime="20231007 16:17:44.129"/>
+</kw>
+<kw name="E Realizar o preenchimento do campos com dados aleatórios" library="abrirSite._steps">
+<kw name="Validação de tela do formulário Personal Details" library="abrirSite._steps">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Iniciando Validação de tela do formulário Personal Details</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231007 16:17:44.133" endtime="20231007 16:17:44.140"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Personal Details</arg>
+<arg>30</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231007 16:17:44.141" endtime="20231007 16:17:45.277"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Employee Full Name</arg>
+<arg>30</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231007 16:17:45.277" endtime="20231007 16:17:45.286"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>PersonalDetails.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231007 16:17:45.475" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="PersonalDetails.png"&gt;&lt;img src="PersonalDetails.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231007 16:17:45.286" endtime="20231007 16:17:45.475"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Validação concluída!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231007 16:17:45.475" endtime="20231007 16:17:45.477"/>
+</kw>
+<status status="PASS" starttime="20231007 16:17:44.132" endtime="20231007 16:17:45.478"/>
+</kw>
+<kw name="Inserir primeiro nome" library="metodo_abrirSite">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${campo_primeiro_nome}</arg>
+<arg>Anderson</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231007 16:17:45.479" level="INFO">Typing text 'Anderson' into text field 'xpath=//input[contains(@class,'oxd-input oxd-input--active orangehrm-firstname')]'.</msg>
+<status status="PASS" starttime="20231007 16:17:45.478" endtime="20231007 16:17:45.759"/>
+</kw>
+<status status="PASS" starttime="20231007 16:17:45.478" endtime="20231007 16:17:45.759"/>
+</kw>
+<kw name="Inserir nome do meio" library="metodo_abrirSite">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${campo_nome_do_meio}</arg>
+<arg>Barros</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231007 16:17:45.761" level="INFO">Typing text 'Barros' into text field 'xpath=//input[contains(@class,'oxd-input oxd-input--active orangehrm-middlename')]'.</msg>
+<status status="PASS" starttime="20231007 16:17:45.760" endtime="20231007 16:17:45.892"/>
+</kw>
+<status status="PASS" starttime="20231007 16:17:45.759" endtime="20231007 16:17:45.892"/>
+</kw>
+<kw name="Inserir último nome" library="metodo_abrirSite">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${campo_ultimo_nome}</arg>
+<arg>Vieira</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231007 16:17:45.903" level="INFO">Typing text 'Vieira' into text field 'xpath=//input[contains(@class,'oxd-input oxd-input--active orangehrm-lastname')]'.</msg>
+<status status="PASS" starttime="20231007 16:17:45.902" endtime="20231007 16:17:46.090"/>
+</kw>
+<status status="PASS" starttime="20231007 16:17:45.892" endtime="20231007 16:17:46.090"/>
+</kw>
+<kw name="Inserir apelido" library="metodo_abrirSite">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${campo_apelido}</arg>
+<arg>vilarins</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231007 16:17:46.093" level="INFO">Typing text 'vilarins' into text field 'xpath=(//input[contains(@class,'oxd-input oxd-input--active')])[5]'.</msg>
+<status status="PASS" starttime="20231007 16:17:46.092" endtime="20231007 16:17:46.281"/>
+</kw>
+<status status="PASS" starttime="20231007 16:17:46.091" endtime="20231007 16:17:46.281"/>
+</kw>
+<kw name="Inserir código do empregado" library="metodo_abrirSite">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${campo_cod_empregado}</arg>
+<arg>763999</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231007 16:17:46.284" level="INFO">Typing text '763999' into text field 'xpath=(//input[contains(@class,'oxd-input oxd-input--active')])[6]'.</msg>
+<status status="PASS" starttime="20231007 16:17:46.282" endtime="20231007 16:17:46.451"/>
+</kw>
+<status status="PASS" starttime="20231007 16:17:46.282" endtime="20231007 16:17:46.452"/>
+</kw>
+<kw name="Inserir número da carteira de habilitação" library="metodo_abrirSite">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${campo_cnh}</arg>
+<arg>24568529</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231007 16:17:46.453" level="INFO">Typing text '24568529' into text field 'xpath=(//input[contains(@class,'oxd-input oxd-input--active')])[8]'.</msg>
+<status status="PASS" starttime="20231007 16:17:46.452" endtime="20231007 16:17:46.591"/>
+</kw>
+<status status="PASS" starttime="20231007 16:17:46.452" endtime="20231007 16:17:46.592"/>
+</kw>
+<kw name="Inserir data de vailidade da habilitação" library="metodo_abrirSite">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${campo_data_validade_chn}</arg>
+<arg>2030-03-25</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231007 16:17:46.593" level="INFO">Typing text '2030-03-25' into text field 'xpath=(//input[contains(@class,'oxd-input oxd-input--active')])[9]'.</msg>
+<status status="PASS" starttime="20231007 16:17:46.592" endtime="20231007 16:17:46.769"/>
+</kw>
+<status status="PASS" starttime="20231007 16:17:46.592" endtime="20231007 16:17:46.770"/>
+</kw>
+<kw name="Inserir número do Ssn" library="metodo_abrirSite">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${campo_numero_SSN}</arg>
+<arg>452874</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231007 16:17:46.771" level="INFO">Typing text '452874' into text field 'xpath=(//input[contains(@class,'oxd-input oxd-input--active')])[10]'.</msg>
+<status status="PASS" starttime="20231007 16:17:46.770" endtime="20231007 16:17:46.955"/>
+</kw>
+<status status="PASS" starttime="20231007 16:17:46.770" endtime="20231007 16:17:46.955"/>
+</kw>
+<kw name="Inserir número do Sin" library="metodo_abrirSite">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${campo_SIN}</arg>
+<arg>258539-8</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231007 16:17:46.956" level="INFO">Typing text '258539-8' into text field 'xpath=(//input[contains(@class,'oxd-input oxd-input--active')])[11]'.</msg>
+<status status="PASS" starttime="20231007 16:17:46.956" endtime="20231007 16:17:47.093"/>
+</kw>
+<status status="PASS" starttime="20231007 16:17:46.955" endtime="20231007 16:17:47.093"/>
+</kw>
+<kw name="Inserir nacionalidade" library="metodo_abrirSite">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${combo_nacionalidade}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231007 16:17:47.093" level="INFO">Clicking element 'xpath=(//i[contains(@class,'oxd-icon bi-caret-down-fill oxd-select-text--arrow')])[1]'.</msg>
+<status status="PASS" starttime="20231007 16:17:47.093" endtime="20231007 16:17:47.204"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231007 16:17:48.207" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231007 16:17:47.205" endtime="20231007 16:17:48.208"/>
+</kw>
+<status status="PASS" starttime="20231007 16:17:47.093" endtime="20231007 16:17:48.208"/>
+</kw>
+<kw name="Inserir estado civil" library="metodo_abrirSite">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${campo_estado_civil}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231007 16:17:48.213" level="INFO">Clicking element 'xpath=//div[@clear='false'][contains(.,'Married')]'.</msg>
+<status status="PASS" starttime="20231007 16:17:48.211" endtime="20231007 16:17:48.420"/>
+</kw>
+<status status="PASS" starttime="20231007 16:17:48.209" endtime="20231007 16:17:48.421"/>
+</kw>
+<kw name="Inserir data de nascimento" library="metodo_abrirSite">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${campo_data_nascimento}</arg>
+<arg>1983-08-20</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231007 16:17:48.425" level="INFO">Typing text '1983-08-20' into text field 'xpath=(//input[contains(@class,'oxd-input oxd-input--active')])[12]'.</msg>
+<status status="PASS" starttime="20231007 16:17:48.423" endtime="20231007 16:17:48.617"/>
+</kw>
+<status status="PASS" starttime="20231007 16:17:48.422" endtime="20231007 16:17:48.617"/>
+</kw>
+<kw name="Selecionar check do gênero" library="metodo_abrirSite">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_genero}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231007 16:17:48.618" level="INFO">Clicking element 'xpath=//label[contains(.,'Male')]'.</msg>
+<status status="PASS" starttime="20231007 16:17:48.617" endtime="20231007 16:17:48.706"/>
+</kw>
+<status status="PASS" starttime="20231007 16:17:48.617" endtime="20231007 16:17:48.706"/>
+</kw>
+<kw name="Inserir número da reservista" library="metodo_abrirSite">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${campo_numero_reservista}</arg>
+<arg>78524524-1</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231007 16:17:48.708" level="INFO">Typing text '78524524-1' into text field 'xpath=(//input[contains(@class,'oxd-input oxd-input--active')])[13]'.</msg>
+<status status="PASS" starttime="20231007 16:17:48.707" endtime="20231007 16:17:48.936"/>
+</kw>
+<status status="PASS" starttime="20231007 16:17:48.706" endtime="20231007 16:17:48.936"/>
+</kw>
+<kw name="Selecionar check de fumante" library="metodo_abrirSite">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_fumante}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231007 16:17:48.940" level="INFO">Clicking element 'xpath=(//i[contains(@class,'oxd-icon bi-check oxd-checkbox-input-icon')])[1]'.</msg>
+<status status="PASS" starttime="20231007 16:17:48.938" endtime="20231007 16:17:49.024"/>
+</kw>
+<status status="PASS" starttime="20231007 16:17:48.937" endtime="20231007 16:17:49.025"/>
+</kw>
+<kw name="Selecionar a opção do tipo sanguíneo" library="metodo_abrirSite">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${combo_tipo_sanguineo}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231007 16:17:49.027" level="INFO">Clicking element 'xpath=(//div[contains(@class,'oxd-select-text-input')])[3]'.</msg>
+<status status="PASS" starttime="20231007 16:17:49.026" endtime="20231007 16:17:49.107"/>
+</kw>
+<kw name="Press" library="pyautogui">
+<arg>Down</arg>
+<doc>Performs a keyboard key press down, followed by a release.</doc>
+<status status="PASS" starttime="20231007 16:17:49.107" endtime="20231007 16:17:49.210"/>
+</kw>
+<kw name="Press" library="pyautogui">
+<arg>Enter</arg>
+<doc>Performs a keyboard key press down, followed by a release.</doc>
+<status status="PASS" starttime="20231007 16:17:49.210" endtime="20231007 16:17:49.313"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${label_tipo_sanguineo}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231007 16:17:49.314" level="INFO">Clicking element 'xpath=//label[contains(text(), "Blood Type")]'.</msg>
+<status status="PASS" starttime="20231007 16:17:49.313" endtime="20231007 16:17:49.395"/>
+</kw>
+<status status="PASS" starttime="20231007 16:17:49.026" endtime="20231007 16:17:49.395"/>
+</kw>
+<status status="PASS" starttime="20231007 16:17:44.131" endtime="20231007 16:17:49.395"/>
+</kw>
+<kw name="E Realizar a add de um anexo" library="abrirSite._steps">
+<kw name="Inserir anexo" library="metodo_abrirSite">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${btn_anexo}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20231007 16:17:49.399" endtime="20231007 16:17:49.711"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_anexo}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231007 16:17:49.713" level="INFO">Clicking element 'xpath=(//button[contains(@type,'button')])[3]'.</msg>
+<status status="PASS" starttime="20231007 16:17:49.711" endtime="20231007 16:17:49.862"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_procurar_anexo}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231007 16:17:49.864" level="INFO">Clicking element 'xpath=//div[@class='oxd-file-button'][contains(.,'Browse')]'.</msg>
+<status status="PASS" starttime="20231007 16:17:49.863" endtime="20231007 16:17:49.946"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231007 16:17:51.948" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231007 16:17:49.947" endtime="20231007 16:17:51.948"/>
+</kw>
+<kw name="Write" library="pyautogui">
+<arg>${EXECDIR}\\7.anexos\\Anderson Vieira_CV.pdf</arg>
+<doc>Performs a keyboard key press down, followed by a release, for each of
+the characters in message.</doc>
+<status status="PASS" starttime="20231007 16:17:51.948" endtime="20231007 16:17:52.180"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231007 16:17:54.182" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231007 16:17:52.180" endtime="20231007 16:17:54.182"/>
+</kw>
+<kw name="Press" library="pyautogui">
+<arg>Enter</arg>
+<doc>Performs a keyboard key press down, followed by a release.</doc>
+<status status="PASS" starttime="20231007 16:17:54.182" endtime="20231007 16:17:54.310"/>
+</kw>
+<status status="PASS" starttime="20231007 16:17:49.399" endtime="20231007 16:17:54.312"/>
+</kw>
+<status status="PASS" starttime="20231007 16:17:49.395" endtime="20231007 16:17:54.313"/>
+</kw>
+<kw name="Quando clicar em “Save” de cada etapa" library="abrirSite._steps">
+<kw name="Clicar na opção salvar" library="metodo_abrirSite">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_save1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231007 16:17:54.326" level="INFO">Clicking element 'xpath=(//button[@type='submit'][contains(.,'Save')])[1]'.</msg>
+<status status="PASS" starttime="20231007 16:17:54.325" endtime="20231007 16:17:54.462"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231007 16:17:57.463" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20231007 16:17:54.462" endtime="20231007 16:17:57.464"/>
+</kw>
+<status status="PASS" starttime="20231007 16:17:54.323" endtime="20231007 16:17:57.465"/>
+</kw>
+<kw name="Clicar na opção salvar(2)" library="metodo_abrirSite">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_save2}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231007 16:17:57.472" level="INFO">Clicking element 'xpath=(//button[@type='submit'][contains(.,'Save')])[2]'.</msg>
+<status status="PASS" starttime="20231007 16:17:57.467" endtime="20231007 16:17:57.713"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231007 16:17:59.714" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231007 16:17:57.713" endtime="20231007 16:17:59.715"/>
+</kw>
+<status status="PASS" starttime="20231007 16:17:57.466" endtime="20231007 16:17:59.718"/>
+</kw>
+<status status="PASS" starttime="20231007 16:17:54.320" endtime="20231007 16:17:59.719"/>
+</kw>
+<kw name="Então o sistema deve apresentar a mensagem “Success – Successfully save&quot;" library="abrirSite._steps">
+<kw name="Confirmação da mensagem “Success – Successfully save&quot;" library="metodo_abrirSite">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>Success.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231007 16:18:00.000" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Success.png"&gt;&lt;img src="Success.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231007 16:17:59.766" endtime="20231007 16:18:00.001"/>
+</kw>
+<status status="PASS" starttime="20231007 16:17:59.765" endtime="20231007 16:18:00.001"/>
+</kw>
+<status status="PASS" starttime="20231007 16:17:59.763" endtime="20231007 16:18:00.001"/>
+</kw>
+<kw name="Finalizar Conexão" library="conexaoWeb" type="TEARDOWN">
+<kw name="Log To Console" library="BuiltIn">
+<arg>....Finalizando aplicação</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231007 16:18:00.003" endtime="20231007 16:18:00.004"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>closed.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231007 16:18:00.187" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="closed.png"&gt;&lt;img src="closed.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231007 16:18:00.005" endtime="20231007 16:18:00.187"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231007 16:18:00.188" endtime="20231007 16:18:02.593"/>
+</kw>
+<status status="PASS" starttime="20231007 16:18:00.002" endtime="20231007 16:18:02.594"/>
+</kw>
+<status status="PASS" starttime="20231007 16:17:29.673" endtime="20231007 16:18:02.596"/>
+</test>
+<status status="PASS" starttime="20231007 16:17:29.154" endtime="20231007 16:18:02.603"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Abrirsite">Abrirsite</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
